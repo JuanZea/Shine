@@ -1,15 +1,17 @@
 <template>
   <div class="relative max-w-lg font-balsamiq">
     <div class="flex flex-col gap-4 relative top-4 justify-center bg-retrat rounded p-8 shadow-md">
-      <div class="flex flex-col">
-        <label for="email" class="font-bold">CORREO ELECTRÓNICO</label>
-        <input id="email" name="email" type="text" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-      </div>
+      <my-input id="email" name="email" type="text" div-class="flex-col" lab-class="font-bold">
+        <template #label>
+          CORREO ELECTRÓNICO
+        </template>
+      </my-input>
 
-      <div class="flex flex-col">
-        <label for="password" class="font-bold">CONTRASEÑA</label>
-        <input id="password" name="password" type="password">
-      </div>
+      <my-input id="password" name="password" type="password" div-class="flex-col" lab-class="font-bold">
+        <template #label>
+          CONTRASEÑA
+        </template>
+      </my-input>
 
       <div class="flex justify-between">
         <button class="btn btn-red text-white focus:ring-offset-retrat">REGISTRARSE</button>
@@ -24,6 +26,8 @@
 </template>
 
 <script>
+import MyInput from "../MyInput.vue";
 export default {
+  components: {MyInput}
 }
 </script>
