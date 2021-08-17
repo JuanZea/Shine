@@ -1,14 +1,22 @@
 <template>
   <div class="min-h-screen flex justify-center bg-poco">
     <div class="mt-8">
-      <login-form/>
+      <login-form v-if="login" @singUp="login = false"/>
+      <register-form v-else @goBack="login = true"/>
     </div>
   </div>
 </template>
 
 <script>
 import LoginForm from "../../components/forms/LoginForm.vue";
+import RegisterForm from "../../components/forms/RegisterForm.vue";
+import {ref} from "vue";
 export default {
-  components: {LoginForm}
+  components: {RegisterForm, LoginForm},
+  setup() {
+    const login = ref(true);
+
+    return{login}
+  }
 }
 </script>
