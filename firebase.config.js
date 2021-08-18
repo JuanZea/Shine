@@ -12,3 +12,26 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+firebase.getCurrentUser = () => {
+    return new Promise((resolve, reject) => {
+        firebase.auth().onAuthStateChanged(user => {
+            setup(user).then(() => {
+                resolve(user);
+            });
+        }, reject);
+    })
+}
+
+const setup = async (user) => {
+    if (user) {
+        // store.commit('set', {key: 'loading', value: 'Verificando rol'});
+        // const querySnapshot = await db.collection("users").doc(user.uid).get();
+        // store.commit('set', {key: 'rol', value: querySnapshot.data().rol});
+        // store.commit('set', {key: 'loading', value: 'Optimizando conexión'});
+        // subscribe();
+        // store.commit('set', {key: 'loading', value: false});
+    } else {
+        // unsubscribe()
+    }
+}

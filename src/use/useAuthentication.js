@@ -1,27 +1,33 @@
+import "../../firebase.config"
 import firebase from "firebase/app";
+import router from "../router";
 
 const register = (name, email, password) => {
-    console.log(name, email, password)
-    // firebase.auth().createUserWithEmailAndPassword(email, password)
-    //     .then(user => {
-    //         // Signed in
-    //         console.log('SING')
-    //         // ...
-    //     })
-    //     .catch((error) => {
-    //         var errorCode = error.code;
-    //         var errorMessage = error.message;
-    //         // ..
-    //     });
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(() => {
+            // Signed in
+            router.push({name: 'home'});
+        }).catch(console.log);
 }
 
 const login = (email, password) => {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Signed in
+            router.push({name: 'home'});
+        }).catch(console.log);
+}
 
+const logout = () => {
+    firebase.auth().signOut().then(() => {
+        router.push({name: `login`});
+    }).catch(console.log);
 }
 
 export default function useAuthentication() {
     return {
         register,
-        login
+        login,
+        logout
     }
 }

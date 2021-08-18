@@ -1,14 +1,12 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import Login from "../views/guest/Login.vue";
+import guest from "./routes/guest";
+import auth from "./routes/auth";
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {
-            path: "/",
-            name: "login",
-            component: Login,
-        },
+        ...guest,
+        ...auth
     ],
 })
 
