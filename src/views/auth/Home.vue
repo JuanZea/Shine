@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-poco"/>
+  <div class="h-full bg-poco"/>
 </template>
 
 <script>

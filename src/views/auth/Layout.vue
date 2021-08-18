@@ -1,15 +1,16 @@
 <template>
-  <button @click="logout">SALIR</button>
-  <router-view/>
+  <div class="h-screen flex flex-col">
+    <navbar/>
+    <div class="flex-grow">
+      <router-view/>
+    </div>
+  </div>
 </template>
 
 <script>
-import {useAuthentication} from "../../use";
+import Navbar from "../../components/Navbar.vue";
 
 export default {
-  setup() {
-    const {logout} = useAuthentication();
-    return {logout}
-  }
+  components: {Navbar},
 }
 </script>
