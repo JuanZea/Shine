@@ -23,6 +23,9 @@ const logout = () => {
         router.push({name: `login`});
     }).catch(console.log);
 }
+const profile = () => {
+    router.push({name: 'myProfile'});
+}
 
 export default function useAuthentication() {
     return {
