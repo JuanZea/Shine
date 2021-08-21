@@ -1,7 +1,9 @@
 const {colors: defaultColors} = require('tailwindcss/defaultTheme')
+const customColors = require("tailwindcss/colors");
 
 const colors = {
     ...defaultColors,
+    orange: customColors.orange,
     ...{
         "poco": "#F2E530",
         "retrat": "#D9D9D9"
