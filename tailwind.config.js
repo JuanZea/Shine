@@ -15,13 +15,17 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         "colors": colors,
-        extend: {},
+        extend: {
+            lineClamp: {
+                9: '9',
+            }
+        },
     },
     variants: {
         extend: {},
     },
     plugins: [
         require('@tailwindcss/forms'),
-        require('tailwindcss-line-clamp')
+        require('@tailwindcss/line-clamp'),
     ],
 }

@@ -4,7 +4,7 @@
       <img class="rounded-lg" width="200" height="300" :src="source" alt="Poster image">
       <div class="absolute inset-0 h-full w-full opacity-0 bg-black hover:opacity-100 rounded-lg px-6 py-4">
         <h1 class="font-bold text-white font-righteous mb-2">{{ title }}</h1>
-        <p class="text-white line-clamp-3">{{ desc }}</p>
+        <p class="text-white line-clamp-9">{{ desc }}</p>
       </div>
     </div>
   </div>
