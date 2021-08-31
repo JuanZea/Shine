@@ -19,6 +19,7 @@
     "postcss": "^8.3.6",
     "sass": "^1.37.5",
     "tailwindcss": "^2.2.7",
+    "tailwindcss-line-clamp": "^1.0.5",
     "vite": "^2.4.4"
   }
 }
