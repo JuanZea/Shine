@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="flex items-center">
-      <button class="bg-red-500 text-white font-bold rounded-lg px-4 py-1 font-righteous tracking-widest" @click="logout">SALIR</button>
+      <button class="bg-red-500 text-white font-bold rounded-lg px-4 py-1 font-righteous tracking-widest" @click="logout">Sign out</button>
     </div>
   </nav>
 </template>
