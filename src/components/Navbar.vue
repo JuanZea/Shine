@@ -12,6 +12,9 @@
         <button class="bg-black text-white font-bold rounded-lg px-4 py-1 font-righteous tracking-widest hover:bg-gray-600 ml-1" @click="router.push({name: 'about'})">About</button>
       </div>
     </div>
+    <div>
+      <input type="search" placeholder="Buscar" class ="mr-2 shadow appearance-none rounded-2xl" name="">
+    </div>
     <div class="flex items-center">
       <button class="bg-red-500 text-white font-bold rounded-lg px-4 py-1 font-righteous tracking-widest" @click="logout">Sign out</button>
     </div>
