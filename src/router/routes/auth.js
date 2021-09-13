@@ -2,7 +2,8 @@ import {authentication} from "../middleware";
 import AuthLayout from "../../views/auth/Layout.vue";
 import Home from "../../views/auth/Home.vue";
 import MyProfile from "../../views/auth/MyProfile.vue";
-
+import showFilms from "../../views/auth/showFilms.vue";
+import About from "../../views/auth/About.vue"
 
 const children = [
     {
@@ -14,6 +15,16 @@ const children = [
         path: '/my-profile',
         name: 'myProfile',
         component: MyProfile,
+    },
+    {
+        path: '/film/:id',
+        name: 'showfilms',
+        component: showFilms,
+    },
+    {
+        path: '/about',
+        name: 'about',
+        component: About,
     }
 ];
 

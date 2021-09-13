@@ -1,3 +1,4 @@
 import useAuthentication from "./useAuthentication";
+import useFilms from "./useFilms";
 
-export {useAuthentication}
+export {useAuthentication, useFilms}
