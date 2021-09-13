@@ -11,7 +11,7 @@
         <div class="flex flex-col items-start ml-4">
           <h4 class="text-xl font-semibold">Alejandro(novato)Yarce Taborda</h4>
           <p class="text-sm">Somos estudiantes de la universidad de Antioquia, con grandes sueños y grandes metas que cumplir</p>
-          <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" href="">GitHub</a>
+          <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" href="https://github.com/DonYarce" target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -22,7 +22,7 @@
         <div class="flex flex-col items-start ml-4">
           <h4 class="text-xl font-semibold">Juan David (crack) Zea</h4>
           <p class="text-sm">Somos estudiantes de la universidad de Antioquia, con grandes sueños y grandes metas que cumplir</p>
-          <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" href="https://github.com/JuanZea">GitHub</a>
+          <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" href="https://github.com/JuanZea" target="_blank" >GitHub </a>
         </div>
       </div>
     </div>
