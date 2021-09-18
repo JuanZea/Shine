@@ -3,7 +3,7 @@ import axios from "axios";
 const service = axios.create({baseURL: `${import.meta.env.VITE_APP_URL_API}/api`});
 
 export const filmsService = {
-    all: () => service.get('films')
+    all: (options) => service.get('films', options)
         .then(response => response.data.data)
         .catch(console.log),
 
