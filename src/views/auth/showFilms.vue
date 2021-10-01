@@ -1,7 +1,7 @@
 <template>
   <div v-if="film" class="bg-poco h-full flex items-center">
     <div class="container bg-black bg-opacity-10 mx-auto p-6">
-      <div class="flex">
+      <div class="flex flex-col lg:flex-row gap-4">
         <img width="500" :src="film.img" alt="Poster film">
         <div class="flex-grow bg-white bg-opacity-20">
           <div class="h-1/2 flex flex-col">
