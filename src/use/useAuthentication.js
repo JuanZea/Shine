@@ -4,8 +4,9 @@ import router from "../router";
 
 const register = (name, email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(() => {
+        .then(async userCredential => {
             // Signed in
+            await userCredential.user.updateProfile({displayName: name});
             router.push({name: 'home'});
         }).catch(console.log);
 }

@@ -10,16 +10,16 @@
 <script>
 import LoginForm from "../../components/forms/LoginForm.vue";
 import RegisterForm from "../../components/forms/RegisterForm.vue";
-import {ref} from "vue";
+import { ref } from "vue";
 import firebase from "firebase/app";
-import {useRouter} from "vue-router";
+import { useRouter } from "vue-router";
 export default {
-  components: {RegisterForm, LoginForm},
+  components: { RegisterForm, LoginForm },
   setup() {
     const router = useRouter();
     if (firebase.getCurrentUser()) router.push({name: 'home'});
     const login = ref(true);
-    return{login}
+    return { login }
   }
 }
 </script>

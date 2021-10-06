@@ -4,6 +4,7 @@ import Home from "../../views/auth/Home.vue";
 import MyProfile from "../../views/auth/MyProfile.vue";
 import showFilms from "../../views/auth/showFilms.vue";
 import About from "../../views/auth/About.vue"
+import AdminOptions from "../../views/auth/AdminOptions.vue";
 
 const children = [
     {
@@ -25,6 +26,11 @@ const children = [
         path: '/about',
         name: 'about',
         component: About,
+    },
+    {
+        path: '/admin-options',
+        name: 'adminOptions',
+        component: AdminOptions,
     }
 ];
 

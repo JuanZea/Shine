@@ -39,8 +39,8 @@
 
 <script>
 import MyInput from "../MyInput.vue";
-import {ref} from "vue";
-import {useAuthentication} from "../../use"
+import { ref } from "vue";
+import { useAuthentication } from "../../use"
 export default {
   emits: ['goBack'],
   components: {MyInput},

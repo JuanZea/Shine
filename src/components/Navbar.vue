@@ -7,6 +7,9 @@
       <searchbar/>
     </div>
     <div class="flex items-center gap-4">
+      <button v-if="isAdmin" title="Admin" class="rounded px-2 py-1 bg-black bg-opacity-70" @click="router.push({name: 'adminOptions'})">
+        <key-icon class="h-7 text-poco hvr-bounce-in"/>
+      </button>
       <button title="About" class="rounded px-2 py-1 bg-indigo-100 bg-opacity-70" @click="router.push({name: 'about'})">
         <at-symbol-icon class="h-7 text-indigo-500 hvr-bounce-in"/>
       </button>
@@ -21,27 +24,28 @@
 </template>
 
 <script>
-import { LogoutIcon, UserCircleIcon, AtSymbolIcon } from "@heroicons/vue/outline";
-import { useAuthentication } from "../use";
+import { LogoutIcon, UserCircleIcon, AtSymbolIcon, KeyIcon } from "@heroicons/vue/outline";
+import { useAdmin, useAuthentication } from "../use";
 import { useRouter } from "vue-router";
 import Searchbar from "./Searchbar.vue";
 import useFilms from "../use/useFilms";
 
 export default {
 
-  components: { Searchbar, LogoutIcon, UserCircleIcon, AtSymbolIcon },
+  components: { Searchbar, LogoutIcon, UserCircleIcon, AtSymbolIcon, KeyIcon },
 
   setup() {
 
     const router = useRouter();
     const { setQuery, refreshFilms } = useFilms();
+    const { isAdmin } = useAdmin();
     const goToHome = () => {
       setQuery();
       refreshFilms();
       router.push({name: 'home'});
     }
     const { logout } = useAuthentication();
-    return { logout, router, goToHome }
+    return { logout, router, goToHome, isAdmin }
 
   }
 

@@ -16,7 +16,7 @@ import Poster from "../../components/Poster.vue";
 import { useFilms } from "../../use";
 
 export default {
-  components: {Poster},
+  components: { Poster },
   setup() {
     const { films, refreshFilms } = useFilms();
     refreshFilms();
