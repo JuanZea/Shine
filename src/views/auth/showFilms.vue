@@ -37,22 +37,22 @@
 </template>
 
 <script>
-import {ref} from "vue";
-import {useRoute} from "vue-router";
-import {ExternalLinkIcon, StarIcon as StarOutline} from "@heroicons/vue/outline";
-import {StarIcon as StarSolid} from "@heroicons/vue/solid";
-import {filmsService} from "../../services/filmsService";
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+import { filmsService } from "../../services/filmsService";
+import { StarIcon as StarSolid } from "@heroicons/vue/solid";
+import { ExternalLinkIcon, StarIcon as StarOutline } from "@heroicons/vue/outline";
 
 export default {
-  components: {ExternalLinkIcon, StarSolid, StarOutline},
+  components: { ExternalLinkIcon, StarSolid, StarOutline },
   setup() {
     const film = ref()
-    const {params} = useRoute();
+    const { params } = useRoute();
     filmsService.one(params.id)
       .then(response => {
         film.value = response;
       })
-    return {film}
+    return { film }
   }
 }
 </script>
