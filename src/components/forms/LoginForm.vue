@@ -14,7 +14,7 @@
       </my-input>
 
       <div class="flex justify-between">
-        <button class="btn btn-red text-white focus:ring-offset-retrat" @click="$emit('singUp')">SING UP</button>
+        <button class="btn btn-red text-white focus:ring-offset-retrat" @click="$emit('signUp')">SIGN UP</button>
         <button class="btn btn-green text-white focus:ring-offset-retrat" @click="login">GO!</button>
       </div>
     </div>
@@ -30,7 +30,7 @@ import MyInput from "../MyInput.vue";
 import {useAuthentication} from "../../use";
 import {ref} from "vue";
 export default {
-  emits: ['singUp'],
+  emits: ['signUp'],
   components: {MyInput},
   setup() {
     const email = ref('');

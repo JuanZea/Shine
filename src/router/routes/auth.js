@@ -1,4 +1,4 @@
-import {authentication} from "../middleware";
+import { authentication, isAdmin } from "../middleware";
 import AuthLayout from "../../views/auth/Layout.vue";
 import Home from "../../views/auth/Home.vue";
 import MyProfile from "../../views/auth/MyProfile.vue";
@@ -31,6 +31,7 @@ const children = [
         path: '/admin-options',
         name: 'adminOptions',
         component: AdminOptions,
+        beforeEnter: [isAdmin]
     }
 ];
 

@@ -10,4 +10,16 @@ export const filmsService = {
     one: (id) => service.get(`films/${id}`)
         .then(response => response.data.data)
         .catch(console.log),
+
+    create: (body) => service.post(`films`, body)
+        .then(response => response.data.data)
+        .catch(console.log),
+
+    update: (id, body) => service.patch(`films/${id}`, body)
+        .then(response => response.data.data)
+        .catch(console.log),
+
+    destroy: (id) => service.delete(`films/${id}`)
+        .then(response => response.data.data)
+        .catch(console.log),
 }

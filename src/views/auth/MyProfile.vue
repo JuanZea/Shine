@@ -2,7 +2,7 @@
   <div class="h-full bg-poco">
     <div class="flex justify-center">
       <div class="h-40 bg-white shadow-lg mt-12 p-4 rounded mb-8">
-        <img class="mx-auto shadow rounded-full" src="https://ui-avatars.com/api/?name=Juan+David&rounded=true&bold=true"/>
+        <img class="mx-auto shadow rounded-full" :src="`https://ui-avatars.com/api/?name=${user.displayName}&rounded=true&bold=true`" alt="avatar" />
         <h1 class="font-righteous font-bold text-2xl text-center">{{ user.displayName }}</h1>
         <h2 class="font-bold text-gray-500">{{ user.email }}</h2>
       </div>

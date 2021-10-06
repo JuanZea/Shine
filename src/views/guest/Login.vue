@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex justify-center bg-poco">
     <div class="mt-8">
-      <login-form v-if="login" @singUp="login = false"/>
+      <login-form v-if="login" @signUp="login = false"/>
       <register-form v-else @goBack="login = true"/>
     </div>
   </div>
